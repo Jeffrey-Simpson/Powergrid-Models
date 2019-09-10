@@ -15,7 +15,7 @@ Clear
 ! The source is set for 1.0 per unit and the Short circuit impedance is set to a small value (0.0001 ohms)
 ! The ~ is just shorthad for "more" for the New or Edit commands
 
-New object=circuit.ieee123pv
+New object=circuit.ieee123pv_house
 ~ basekv=4.16 Bus1=150 pu=1.00 R1=0 X1=0.0001 R0=0 X0=0.0001
 
 ! 3-PHASE GANGED REGULATOR AT HEAD OF FEEDER (KERSTING ASSUMES NO IMPEDANCE IN THE REGULATOR)
@@ -209,12 +209,12 @@ Redirect IEEE123Regulators.DSS
 //Redirect IEEE123Loads.DSS
 Redirect Loadshape.dss
 
-redirect IEEE123CommLoads.dss       // 3-phase and 1-phase delta loads, always use this
+// redirect IEEE123CommLoads.dss       // 3-phase and 1-phase delta loads, always use this
 // use one but not both of the following
-//redirect IEEE123PrimaryLoads.dss    // 1-phase wye loads on the primary
-redirect IEEE123SecondaryLoads.dss  // 1-phase wye loads converted to secondary service
+// redirect IEEE123PrimaryLoads.dss    // 1-phase wye loads on the primary
+// redirect IEEE123SecondaryLoads.dss  // 1-phase wye loads converted to secondary service
 
-redirect pvsystems_high_pvs.dss
+// redirect pvsystems_high_pvs.dss
 
 ! All devices in the test feeder are now defined.
 !
